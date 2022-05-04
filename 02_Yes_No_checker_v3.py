@@ -1,5 +1,5 @@
 # Similar to 02_yes_no_checker_v2
-# turned it into a function to copy to the base code
+# I have turned it into a function to copy to the base code
 
 def yes_no(question_text):
     while True:
