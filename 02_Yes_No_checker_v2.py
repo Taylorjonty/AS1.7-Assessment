@@ -16,3 +16,4 @@ while answer != "x":
         print("you need to pick yes or no")
 
     print(f"You chose {answer}!")
+    print()
