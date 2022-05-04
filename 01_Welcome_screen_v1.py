@@ -1,4 +1,4 @@
-# This will be the very start of the game
+# This component will be at the very start of the game
 user_name = ""
 # Welcome the player to the game
 print("Welcome to the maori language quiz!")
