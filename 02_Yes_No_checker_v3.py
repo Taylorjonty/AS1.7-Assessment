@@ -12,11 +12,14 @@ def yes_no(question_text):
         # If the answer is no, show the instructions
         elif answer == "no" or answer == "n":
             answer = "No"
-            print("instructions")
+            print("*** instructions ***")
+            print()
+            print("### How to play ###")
             return answer
         # Tell player to answer yes or no
         else:
             print("Please answer 'yes' or 'no'")
+            print()
 
 
 # Ask if the person has played before
