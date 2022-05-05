@@ -3,7 +3,6 @@
 
 def yes_no(question_text):
     while True:
-        # Ask if the person has played before
         answer = input(question_text).lower()
         # If the answer is yes, continue
         if answer == "yes" or answer == "y":
@@ -20,5 +19,6 @@ def yes_no(question_text):
             print("Please answer 'yes' or 'no'")
 
 
+# Ask if the person has played before
 show_instruction = yes_no("Have you played this game before: ")
 
