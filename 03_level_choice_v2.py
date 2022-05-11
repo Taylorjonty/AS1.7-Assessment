@@ -14,7 +14,7 @@ while l_choice != "e" or l_choice != "h":
         choice = "Hard"
         break
     else:
-        print("please choose easy or hard by pressing e or h")
+        print("please choose easy or hard by pressing E or H")
 
 
 print(f"You chose {choice} mode")
