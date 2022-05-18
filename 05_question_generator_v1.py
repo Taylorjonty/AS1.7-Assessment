@@ -3,6 +3,7 @@ import random
 points = 0
 rounds = 0
 
+# asks what level the player wants
 mode = input("What level do you want: ").lower()
 if mode == "easy":
     print("Easy Mode")
