@@ -1,3 +1,5 @@
+# This component will Generate the questions
+
 import random
 
 points = 0
