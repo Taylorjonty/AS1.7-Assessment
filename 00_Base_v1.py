@@ -1,3 +1,5 @@
+import random
+
 def yes_no(question_text):
     while True:
         answer = input(question_text).lower()
@@ -37,18 +39,63 @@ def levels():
             print(f"You have {rounds} rounds")
 
 
+def generate_question_easy():
+    rounds = 1
+    easy_question = ["tahi", "Rua", "toru", "wha", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
+    # Answers
+    e_answer = ""
+    e_question = 0
+    points = 0
+    while rounds <= 10:
+        e_question = random.randint(1, 10)
+        e_result = (easy_question[e_question - 1])
+        e_answer = int(input(f"What does {e_result} mean: "))
+        if e_answer == e_question:
+            print("Correct")
+            points += 1
+            rounds += 1
+        else:
+            print("incorrect")
+            rounds += 1
+
+    print(f"You got {points} out of 10")
+
+
 def age_checker(question_text):
     while True:
 
         age = int(input(question_text))
 
-        if age >= 12 or age <= 5:
+        if age >= 13 or age <= 5:
             print("You are not on primary school so you can't play")
             exit()
 
         else:
             playability = "Can"
             return playability
+
+
+def generate_question_hard():
+    rounds = 1
+    hard_question = ["tahi", "Rua", "toru", "wha", "rima", "ono", "whitu", "waru", "iwa", "tekau", "tekau ma tahi",
+                     "tekau ma rua", "tekau ma toru", "tekau ma wha", "tekau ma rima", "tekau ma ono", "tekau ma whitu",
+                     "tekau ma waru", "tekau ma iwa", "rua tekau"]
+    h_question = 0
+    h_answer = ""
+    points = 0
+    while rounds <= 20:
+        h_question = random.randint(1, 10)
+        h_result = (hard_question[h_question - 1])
+        h_answer = int(input(f"What does {h_result} mean: "))
+        if h_answer == h_question:
+            print("Correct")
+            points += 1
+            rounds += 1
+        else:
+            print("incorrect")
+            rounds += 1
+
+    print(f"You got {points} out of 20")
 
 
 # Ask if the person has played before
@@ -61,7 +108,7 @@ user_name = input("What is your name: ")
 print(f"Hello {user_name}")
 # Asks and checks that the player is in primary school
 playability_ = age_checker("How old are you: ")
-print(f"you {playability_} play this game.")
+print(f"You {playability_} play this game.")
 # Asks if the player has played before and will need instructions
 show_instruction = yes_no("Have you played this game before: ")
 print()
@@ -69,6 +116,11 @@ l_choice_local = ask_level()
 print(f"{l_choice_local}")
 levels()
 print("Lets Go!")
+# If it's easy, play this code
+if l_choice_local == "easy":
+    generate_question_easy()
+else:
+    generate_question_hard()
 
 
 
