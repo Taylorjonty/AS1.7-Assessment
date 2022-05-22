@@ -12,6 +12,7 @@ def ask_level():
             break
         else:
             print("Enter E or H ")
+            break
 
     return l_choice_local
 
