@@ -8,7 +8,7 @@ def ask_level():
             l_choice_local = "easy"
             break
         elif l_choice_local == "h":
-            l_choice_local = "hard"\
+            l_choice_local = "hard"
             break
         else:
             print("Enter E or H ")
