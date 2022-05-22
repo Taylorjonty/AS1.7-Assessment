@@ -11,11 +11,11 @@ while l_choice != "e" or l_choice != "h":
     # Asks whether the player wants to play easy or hard mode (part 2)
     l_choice = input("Press E for easy mode. Press H for hard mode: ").lower()
     # if the player answer is easy play this part
-    if l_choice == "e":
+    if l_choice == "e" or l_choice == "easy":
         choice = "Easy"
         break
     # if the player answer is hard play this part
-    elif l_choice == "h":
+    elif l_choice == "h" or l_choice == "hard":
         choice = "Hard"
         break
     # if the player answer is not either, redo loop

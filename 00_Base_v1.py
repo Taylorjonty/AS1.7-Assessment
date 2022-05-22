@@ -1,5 +1,6 @@
 import random
 
+
 def yes_no(question_text):
     while True:
         answer = input(question_text).lower()
@@ -21,9 +22,13 @@ def yes_no(question_text):
 
 
 def ask_level():
+    # Finds out what level you want
     l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
+    # if the lever choice is easy
     if l_choice_local == "e":
+        # Set variable to easy
         l_choice_local = "easy"
+        # Set variable to hard
     else:
         l_choice_local = "hard"
 
@@ -31,19 +36,21 @@ def ask_level():
 
 
 def levels():
-        if l_choice_local == "easy":
-            rounds = 10
-            print(f"You have {rounds} rounds")
-        else:
-            rounds = 20
-            print(f"You have {rounds} rounds")
+    # If the level is easy, play ten rounds
+    if l_choice_local == "easy":
+        rounds = 10
+        print(f"You have {rounds} rounds")
+    # If the level is hard, play 20 rounds
+    else:
+        rounds = 20
+        print(f"You have {rounds} rounds")
 
 
 def generate_question_easy():
     rounds = 1
     easy_question = ["tahi", "Rua", "toru", "wha", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
     # Answers
-    e_answer = ""
+    e_answer = 0
     e_question = 0
     points = 0
     while rounds <= 10:
@@ -98,8 +105,7 @@ def generate_question_hard():
     print(f"You got {points} out of 20")
 
 
-# Ask if the person has played before
-# Welcome the player to the game
+# Main routine
 print("Welcome to the maori language quiz!")
 print()
 # Ask what the players name is
@@ -121,6 +127,3 @@ if l_choice_local == "easy":
     generate_question_easy()
 else:
     generate_question_hard()
-
-
-
