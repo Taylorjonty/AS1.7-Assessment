@@ -22,15 +22,17 @@ def yes_no(question_text):
 
 
 def ask_level():
-    # Finds out what level you want
+    l_choice_local = ""
     l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
-    # if the lever choice is easy
-    if l_choice_local == "e":
-        # Set variable to easy
-        l_choice_local = "easy"
-        # Set variable to hard
-    else:
-        l_choice_local = "hard"
+    while l_choice_local != "easy" or l_choice_local != "hard":
+        if l_choice_local == "e":
+            l_choice_local = "easy"
+            break
+        elif l_choice_local == "h":
+            l_choice_local = "hard"
+            break
+        else:
+            print("Enter E or H ")
 
     return l_choice_local
 
