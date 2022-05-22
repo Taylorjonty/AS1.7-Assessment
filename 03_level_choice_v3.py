@@ -12,5 +12,5 @@ def ask_level():
 
 # main routine
 l_choice_local = ask_level()
-print(f"{l_choice_local}")
+print(f"{l_choice_local} mode selected")
 
