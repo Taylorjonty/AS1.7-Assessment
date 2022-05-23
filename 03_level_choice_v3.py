@@ -2,8 +2,8 @@
 # based on 03_level_choice_v1
 def ask_level():
     l_choice_local = ""
-    l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
     while l_choice_local != "easy" or l_choice_local != "hard":
+        l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
         if l_choice_local == "e":
             l_choice_local = "easy"
             break
@@ -12,7 +12,6 @@ def ask_level():
             break
         else:
             print("Enter E or H ")
-            break
 
     return l_choice_local
 

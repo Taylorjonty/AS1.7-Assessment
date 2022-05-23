@@ -23,8 +23,8 @@ def yes_no(question_text):
 
 def ask_level():
     l_choice_local = ""
-    l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
     while l_choice_local != "easy" or l_choice_local != "hard":
+        l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
         if l_choice_local == "e":
             l_choice_local = "easy"
             break
@@ -85,13 +85,16 @@ def age_checker(question_text):
 
 
 def generate_question_hard():
+    # Shows the first round
     rounds = 1
+    # Here are the questions
     hard_question = ["tahi", "Rua", "toru", "wha", "rima", "ono", "whitu", "waru", "iwa", "tekau", "tekau ma tahi",
                      "tekau ma rua", "tekau ma toru", "tekau ma wha", "tekau ma rima", "tekau ma ono", "tekau ma whitu",
                      "tekau ma waru", "tekau ma iwa", "rua tekau"]
     h_question = 0
     h_answer = ""
     points = 0
+    # While there is less than 20 rounds
     while rounds <= 20:
         h_question = random.randint(1, 10)
         h_result = (hard_question[h_question - 1])
