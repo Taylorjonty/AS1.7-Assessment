@@ -67,7 +67,7 @@ def generate_question_easy():
             print("incorrect")
             rounds += 1
 
-    print(f"You got {points} out of 10")
+    return points
 
 
 def age_checker(question_text):
@@ -107,7 +107,7 @@ def generate_question_hard():
             print("incorrect")
             rounds += 1
 
-    print(f"You got {points} out of 20")
+    return points
 
 
 # Main routine
