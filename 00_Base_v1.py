@@ -66,8 +66,7 @@ def generate_question_easy():
         else:
             print("incorrect")
             rounds += 1
-
-    return points
+    print(f"You got {points}/10")
 
 
 def age_checker(question_text):
@@ -75,7 +74,7 @@ def age_checker(question_text):
 
         age = int(input(question_text))
 
-        if age >= 13 or age <= 5:
+        if age >= 13 or age <= 4:
             print("You are not on primary school so you can't play")
             exit()
 
@@ -106,8 +105,7 @@ def generate_question_hard():
         else:
             print("incorrect")
             rounds += 1
-
-    return points
+    print(f"You got {points}/20")
 
 
 # Main routine
