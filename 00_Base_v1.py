@@ -50,7 +50,7 @@ def levels():
 
 def generate_question_easy():
     rounds = 1
-    easy_question = ["tahi", "Rua", "toru", "wha", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
+    easy_question = ["tahi", "Rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
     # Answers
     e_answer = 0
     e_question = 0
@@ -87,8 +87,8 @@ def generate_question_hard():
     # Shows the first round
     rounds = 1
     # Here are the questions
-    hard_question = ["tahi", "Rua", "toru", "wha", "rima", "ono", "whitu", "waru", "iwa", "tekau", "tekau ma tahi",
-                     "tekau ma rua", "tekau ma toru", "tekau ma wha", "tekau ma rima", "tekau ma ono", "tekau ma whitu",
+    hard_question = ["tahi", "Rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa", "tekau", "tekau ma tahi",
+                     "tekau ma rua", "tekau ma toru", "tekau ma whā", "tekau ma rima", "tekau ma ono", "tekau ma whitu",
                      "tekau ma waru", "tekau ma iwa", "rua tekau"]
     h_question = 0
     h_answer = ""
