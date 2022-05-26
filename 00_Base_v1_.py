@@ -60,11 +60,11 @@ def generate_question_easy():
         e_result = (easy_question[e_question - 1])
         e_answer = int(input(f"What does {e_result} mean: "))
         if e_answer == e_question:
-            print(formatter(("^", "Correct")))
+            print("Correct")
             points += 1
             rounds += 1
         else:
-            print(formatter("X", "incorrect"))
+            print("incorrect")
             rounds += 1
     print(f"You got {points}/10")
 
@@ -79,7 +79,7 @@ def age_checker(question_text):
             exit()
 
         else:
-            playability = "Can"
+            playability = "Go"
             return playability
 
 
@@ -108,38 +108,28 @@ def generate_question_hard():
     print(f"You got {points}/20")
 
 
-def formatter(symbol, text):
-    # The symbol has 3 of it on either side
-    sides = symbol * 3
-    # it is the 3 on either side with text in the middle
-    formatted_text = f"{sides} {text} {sides}"
-    # The top and bottom are the symbol repeated
-    top_bottom = symbol * len(formatted_text)
-    # goes back with three rows
-    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
-
-
 # Main routine
-print(formatter("*", "Welcome to the maori language quiz!"))
+print(("*", "Welcome to the maori language quiz!"))
 print()
 # Ask what the players name is
 user_name = input("What is your name: ")
 # Say hello to the player
 print(f"Hello {user_name}")
+print()
 # Asks and checks that the player is in primary school
 playability_ = age_checker("How old are you: ")
-print(f"You {playability_} play this game.")
+print()
 # Asks if the player has played before and will need instructions
 show_instruction = yes_no("Have you played this game before: ")
 print()
 l_choice_local = ask_level()
 print(f"{l_choice_local}")
 levels()
-print("Lets Go!")
+print("Lets Go")
 # If it's easy, play this code
 if l_choice_local == "easy":
     generate_question_easy()
 else:
     generate_question_hard()
 
-print(formatter("*", "Thanks for playing"))
+print("Thanks for playing")
