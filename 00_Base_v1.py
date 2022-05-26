@@ -141,3 +141,5 @@ if l_choice_local == "easy":
     generate_question_easy()
 else:
     generate_question_hard()
+
+print(formatter("*", "Thanks for playing"))
