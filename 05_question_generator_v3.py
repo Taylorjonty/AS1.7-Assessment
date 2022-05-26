@@ -35,7 +35,7 @@ def generate_question_hard():
     h_answer = ""
     points = 0
     while rounds <= 20:
-        h_question = random.randint(1, 10)
+        h_question = random.randint(1, 20)
         h_result = (hard_question[h_question - 1])
         h_answer = int(input(f"What does {h_result} mean: "))
         if h_answer == h_question:
