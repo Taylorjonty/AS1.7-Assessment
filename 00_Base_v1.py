@@ -60,11 +60,11 @@ def generate_question_easy():
         e_result = (easy_question[e_question - 1])
         e_answer = int(input(f"What does {e_result} mean: "))
         if e_answer == e_question:
-            print("Correct")
+            print(formatter(("^", "Correct")))
             points += 1
             rounds += 1
         else:
-            print("incorrect")
+            print(formatter("X", "incorrect"))
             rounds += 1
     print(f"You got {points}/10")
 
@@ -95,7 +95,7 @@ def generate_question_hard():
     points = 0
     # While there is less than 20 rounds
     while rounds <= 20:
-        h_question = random.randint(1, 10)
+        h_question = random.randint(1, 20)
         h_result = (hard_question[h_question - 1])
         h_answer = int(input(f"What does {h_result} mean: "))
         if h_answer == h_question:
@@ -108,8 +108,19 @@ def generate_question_hard():
     print(f"You got {points}/20")
 
 
+def formatter(symbol, text):
+    # The symbol has 3 of it on either side
+    sides = symbol * 3
+    # it is the 3 on either side with text in the middle
+    formatted_text = f"{sides} {text} {sides}"
+    # The top and bottom are the symbol repeated
+    top_bottom = symbol * len(formatted_text)
+    # goes back with three rows
+    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
+
+
 # Main routine
-print("Welcome to the maori language quiz!")
+print(formatter("*", "Welcome to the maori language quiz!"))
 print()
 # Ask what the players name is
 user_name = input("What is your name: ")
