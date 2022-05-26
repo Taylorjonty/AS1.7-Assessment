@@ -109,7 +109,7 @@ def generate_question_hard():
 
 
 # Main routine
-print(("*", "Welcome to the maori language quiz!"))
+print("Welcome to the maori language quiz!")
 print()
 # Ask what the players name is
 user_name = input("What is your name: ")
