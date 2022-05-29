@@ -16,7 +16,8 @@ def yes_no(question_text):
             print("To play this game, choose easy or hard mode")
             print("Easy has 10 questions between 1 and 10")
             print("Hard has 20 questions between 1 and 20")
-            print("To answer, press the number on the keyboard, then press <enter>")
+            print("To answer, press the number on the keyboard, "
+                  "then press <enter>")
             print("Do not type them out. Answer '1' not 'one'")
             return answer
         # Tell player to answer yes or no
@@ -28,7 +29,8 @@ def yes_no(question_text):
 def ask_level():
     l_choice_local = ""
     while l_choice_local != "easy" or l_choice_local != "hard":
-        l_choice_local = input("What difficulty level would you like.\n""\nPress E for easy or H for hard: ").lower()
+        print("What difficulty level would you like.")
+        l_choice_local = input("Press E for easy or H for hard: ").lower()
         if l_choice_local == "e":
             l_choice_local = "easy"
             break
@@ -54,7 +56,8 @@ def levels():
 
 def generate_question_easy():
     rounds = 1
-    easy_question = ["tahi", "Rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa", "tekau"]
+    easy_question = ["tahi", "Rua", "toru", "whā", "rima", "ono",
+                     "whitu", "waru", "iwa", "tekau"]
     # Answers
     e_answer = 0
     e_question = 0
@@ -91,8 +94,11 @@ def generate_question_hard():
     # Shows the first round
     rounds = 1
     # Here are the questions
-    hard_question = ["tahi", "Rua", "toru", "whā", "rima", "ono", "whitu", "waru", "iwa", "tekau", "tekau ma tahi",
-                     "tekau ma rua", "tekau ma toru", "tekau ma whā", "tekau ma rima", "tekau ma ono", "tekau ma whitu",
+    hard_question = ["tahi", "Rua", "toru", "whā", "rima", "ono", "whitu",
+                     "waru", "iwa",
+                     "tekau", "tekau ma tahi","tekau ma rua",
+                     "tekau ma toru", "tekau ma whā",
+                     "tekau ma rima", "tekau ma ono", "tekau ma whitu",
                      "tekau ma waru", "tekau ma iwa", "rua tekau"]
     h_question = 0
     h_answer = ""
