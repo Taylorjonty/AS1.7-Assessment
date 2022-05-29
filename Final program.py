@@ -96,7 +96,7 @@ def generate_question_hard():
     # Here are the questions
     hard_question = ["tahi", "Rua", "toru", "whā", "rima", "ono", "whitu",
                      "waru", "iwa",
-                     "tekau", "tekau ma tahi","tekau ma rua",
+                     "tekau", "tekau ma tahi", "tekau ma rua",
                      "tekau ma toru", "tekau ma whā",
                      "tekau ma rima", "tekau ma ono", "tekau ma whitu",
                      "tekau ma waru", "tekau ma iwa", "rua tekau"]
